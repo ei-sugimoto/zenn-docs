@@ -10,7 +10,7 @@ web サーバを自作して理解を深めるのと、go についてもっと�
 
 リポジトリは以下です。
 
-<https://github.com/ei-sugimoto/ngonx>
+https://github.com/ei-sugimoto/ngonx
 
 ## features
 
@@ -44,7 +44,7 @@ CMD ["/go/bin/main"]
 ```
 
 以下の記事でも書かれているのですが、
-<https://zenn.dev/kariya_mitsuru/articles/4bd6e5c242f463>
+https://zenn.dev/kariya_mitsuru/articles/4bd6e5c242f463
 
 ```Docker
 RUN --mount=source=.,target=.\
