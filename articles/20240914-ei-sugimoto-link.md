@@ -8,6 +8,10 @@ published: false
 
 web サーバを自作して理解を深めるのと、go についてもっと触れたいと思ったため、作成に至りました。
 
+リポジトリは以下です。
+
+<https://github.com/ei-sugimoto/ngonx>
+
 ## features
 
 ✅ 　 reverse proxy
