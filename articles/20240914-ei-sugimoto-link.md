@@ -1,9 +1,9 @@
 ---
 title: "自作のwebサーバを作成してみる"
 emoji: "🐈"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
-published: false
+type: "idea" # tech: 技術記事 / idea: アイデア
+topics: ["go","docker","webサーバ"]
+published: true
 ---
 
 web サーバを自作して理解を深めるのと、go についてもっと触れたいと思ったため、作成に至りました。
@@ -11,6 +11,8 @@ web サーバを自作して理解を深めるのと、go についてもっと�
 リポジトリは以下です。
 
 https://github.com/ei-sugimoto/ngonx
+
+スターをいただけると喜びます。
 
 ## features
 
@@ -54,3 +56,20 @@ RUN --mount=source=.,target=.\
 このように、build したものは、current directory ではない場所に保存してください。
 
 `mount=bind`は read-only になるそうです。
+
+2. tomlファイルで設定する。
+以下のようにtomlファイルを作成することで、あるエンドポイント来たら指定されたサーバへ接続する。
+```toml:example.toml
+[server1]
+host = "service1"
+port = 80
+endpoint = "/service1"
+
+[server2]
+host = "service2"
+port = 80
+endpoint = "/service2"
+```
+## 追加していきたい機能
+1. ロードバランサを追加する
+2. persistenceの設定項目の追加
